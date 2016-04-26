@@ -12,16 +12,16 @@
 		$(document).ready( function () {
 			var words = "earth,mars,mercury";/*,neptune,pluto,saturn,jupiter,one,two,"+
 						"three,four,five,six,seven,eight,mozart,bach,meyer,rose,mahler";*/
-			
+
 			//attach the game to a div
 			$("#theGrid").wordsearchwidget(
 				{"wordlist" : words,
-				"gridsize" : 10, 
+				"gridsize" : 10,
 				"onWordFound" : function(ob){
 					$('#onWordFound').html("Found: " + ob.word);
 					d = setTimeout(function(){
 						clearTimeout(d);
-						$('#onWordFound').html(" ");					
+						$('#onWordFound').html(" ");
 					},3000);
 
 				},
@@ -31,13 +31,15 @@
 			});
 		});
 
-    
+
         </script>
-        
+
     </head>
     <body>
+      <center>
         <div id="theGrid"></div>
-	<div id="onWordSearchComplete"></div>
-	<div id="onWordFound"></div>
+          <div id="onWordSearchComplete"></div>
+          <div id="onWordFound"></div>
+      </center>
     </body>
 </html>
